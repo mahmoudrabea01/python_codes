@@ -20,12 +20,11 @@ best_math_schools.sort_values('average_math', ascending=False)
 
 # this will return a sorted table that's been created from the condition and have two fields
 
-# 3
+print(best_math_schools)
 
 # What are the top 10 performing schools based on the combined SAT scores?
 
-schools['total_SAT'] = schools['average_math'] + \
-    schools['average_reading'] + schools['average_writing']
+schools['total_SAT'] = schools['average_math'] + schools['average_reading'] + schools['average_writing']
 
 top_10_schools = schools.sort_values('total_SAT', ascending=False)[
     ['school_name', 'total_SAT']].head(10)
